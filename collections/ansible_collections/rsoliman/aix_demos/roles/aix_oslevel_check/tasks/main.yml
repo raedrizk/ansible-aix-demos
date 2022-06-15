@@ -1,5 +1,5 @@
 ---
-- name: Gather LPP Facts 
+- name: Gather oslevel 
   ansible.builtin.shell: "oslevel -s"
   register: output_oslevel
 
