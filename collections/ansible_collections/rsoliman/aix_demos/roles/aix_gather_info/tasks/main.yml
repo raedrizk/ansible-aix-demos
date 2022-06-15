@@ -1,0 +1,36 @@
+---
+#Ansible Facts
+- name: gather ansible facts
+  ansible.builtin.setup:
+
+- name: Print all available facts
+  ansible.builtin.debug:
+    var: ansible_facts
+
+#LVM Facts
+- name: Gather all lvm facts
+  ibm.power_aix.lvm_facts:
+  register: system_lvm_facts
+
+- name: Print gathered lvm Facts
+  ansible.builtin.debug:
+    var: system_lvm_facts
+
+#LPAR Facts
+- name: Gather all lpar facts
+  ibm.power_aix.lpar_facts:
+  register: system_lpar_facts
+
+- name: Print gathered lpar Facts
+  ansible.builtin.debug:
+    var: system_lpar_facts
+
+
+#LPAR Facts
+- name: Gather all lpp (Installed Software Products) facts
+  ibm.power_aix.lpp_facts:
+  register: system_lpp_facts
+
+- name: Print gathered lpp Facts
+  ansible.builtin.debug:
+    var: system_lpp_facts

@@ -1,0 +1,3 @@
+---
+nim_lpp_source: "{{ nim_lpp_source_choice | default('7200-05-02-2114-lpp_source') }}"
+nim_master: "{{ num_master_choice | default('nim01') }}"

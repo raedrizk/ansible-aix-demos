@@ -1,0 +1,19 @@
+---
+- name: Cleanup any existing alt_disk_copy 
+  ibm.power_aix.alt_disk:
+    action: clean
+
+- name: Create an alt_disk_copy for backup
+  ibm.power_aix.alt_disk:
+    targets: hdisk1
+
+- name: Run AIX Update
+  ibm.power_aix.nim:
+    action: update
+    lpp_source: "{{ nim_lpp_source }}"
+    targets: "{{ ansible_hostname }}"
+  delegate_to: "{{ nim_master }}"    
+
+- name: Reboot
+  ibm.power_aix.reboot:
+    post_reboot_delay: 180

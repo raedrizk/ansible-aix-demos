@@ -1,0 +1,8 @@
+---
+- name: Download AIX Updates to targets
+  ibm.power_aix.nim_suma:
+    action: download
+    download_dir: "/export/nim/lpp_source"
+    lpp_source_name: "{{ nim_lpp_source }}"
+    oslevel: "{{ oslevel }}"
+    targets: "{{ target_hosts }}" 

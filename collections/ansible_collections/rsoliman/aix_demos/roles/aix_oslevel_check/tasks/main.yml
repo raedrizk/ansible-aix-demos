@@ -1,0 +1,13 @@
+---
+- name: Gather LPP Facts 
+  ansible.builtin.shell: "oslevel -s"
+  register: output_oslevel
+
+- name: Print the oslevel
+  ansible.builtin.debug:
+    msg: "{{ ansible_hostname }} has the AIX oslevel of {{ output_oslevel.stdout }}"
+
+- name: set stat for the oslevel
+  ansible.builtin.set_stats:
+    data:
+      aix_oslevel: "{{ output_oslevel.stdout }}"
