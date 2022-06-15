@@ -1,6 +1,6 @@
 ---
 - name: Check and Set stat for the AIX OSLevel. 
   hosts: all
-  gather_facts: false
+  gather_facts: true
   roles:
   - rsoliman.aix_demos.aix_oslevel_check

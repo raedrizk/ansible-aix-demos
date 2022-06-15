@@ -1,6 +1,7 @@
 ---
 - name: Use Service Update Management Assistant (SUMA) to update specified target systems up to a specific service packs level
   hosts: nim01
+  gather_facts: true
   vars: 
     oslevel: "{{ target_oslevel | default('latest') }}"
     nim_lpp_source: 7200-05-02-2114-lpp_source

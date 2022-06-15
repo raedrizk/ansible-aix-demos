@@ -1,6 +1,6 @@
 ---
 - name: Patch AIX Hosts
   hosts: all
-  gather_facts: false
+  gather_facts: true
   roles:
   - rsoliman.aix_demos.aix_patch

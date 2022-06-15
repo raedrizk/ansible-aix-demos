@@ -27,7 +27,7 @@
 
 
 #LPAR Facts
-- name: Gather all lpp (Installed Software Products) facts
+- name: Gather all lpp facts
   ibm.power_aix.lpp_facts:
   register: system_lpp_facts
 
