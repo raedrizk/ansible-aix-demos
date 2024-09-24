@@ -1,8 +1,8 @@
 ---
-- name: Bootstrapp IBM Power Systems AIX servers with Yum or DNF package managers. 
+- name: Bootstrapp IBM Power Systems AIX servers with Yum or DNF package managers.
   hosts: all
   gather_facts: true
-  vars: 
-    pkgtype: "{{ pkgtype_choice | default('yum')}}" 
+  vars:
+    pkgtype: "{{ pkgtype_choice | default('yum')}}"
   roles:
-  - ibm.power_aix.power_aix_bootstrap
+    - ibm.power_aix.power_aix_bootstrap

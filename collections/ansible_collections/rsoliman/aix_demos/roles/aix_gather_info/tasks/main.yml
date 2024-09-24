@@ -25,7 +25,6 @@
   ansible.builtin.debug:
     var: system_lpar_facts
 
-
 #LPAR Facts
 - name: Gather all lpp facts
   ibm.power_aix.lpp_facts:
