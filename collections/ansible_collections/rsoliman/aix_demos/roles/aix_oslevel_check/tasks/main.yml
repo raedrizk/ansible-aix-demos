@@ -1,6 +1,6 @@
 ---
-- name: Gather oslevel 
-  ansible.builtin.shell: "oslevel -s"
+- name: Gather oslevel
+  ansible.builtin.shell: oslevel -s
   register: output_oslevel
 
 - name: Print the oslevel

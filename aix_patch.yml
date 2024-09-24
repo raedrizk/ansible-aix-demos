@@ -3,4 +3,4 @@
   hosts: all
   gather_facts: true
   roles:
-  - rsoliman.aix_demos.aix_patch
+    - rsoliman.aix_demos.aix_patch

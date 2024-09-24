@@ -1,5 +1,5 @@
 ---
-- name: Cleanup any existing alt_disk_copy 
+- name: Cleanup any existing alt_disk_copy
   ibm.power_aix.alt_disk:
     action: clean
 
@@ -12,7 +12,7 @@
     action: update
     lpp_source: "{{ nim_lpp_source }}"
     targets: "{{ ansible_hostname }}"
-  delegate_to: "{{ nim_master }}"    
+  delegate_to: "{{ nim_master }}"
 
 - name: Reboot
   ibm.power_aix.reboot:
